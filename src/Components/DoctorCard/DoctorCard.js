@@ -4,11 +4,24 @@ import AppointmentForm from "./AppointmentForm";
 const DoctorCard = ({ doctor }) => {
   const { name, experience, rating, image, profile } = doctor;
   const [showForm, setShowForm] = useState(false);
+  const [appointments, setAppointments] = useState([]); // Estado para almacenar las citas reservadas
 
   // Función para manejar el envío del formulario
   const handleFormSubmit = (formData) => {
-    console.log("Cita reservada:", formData);
+    const newAppointment = {
+      id: new Date().getTime(), // Genera un ID único basado en la fecha y hora actual
+      ...formData,
+    };
+    setAppointments([...appointments, newAppointment]); // Agrega la nueva cita al estado
     setShowForm(false); // Cierra el formulario después de enviarlo
+    alert("Cita reservada con éxito!"); // Muestra un mensaje de éxito
+  };
+
+  // Función para cancelar una cita
+  const handleCancelAppointment = (id) => {
+    const updatedAppointments = appointments.filter((appointment) => appointment.id !== id);
+    setAppointments(updatedAppointments); // Elimina la cita del estado
+    alert("Cita cancelada con éxito!"); // Muestra un mensaje de éxito
   };
 
   return (
@@ -26,9 +39,20 @@ const DoctorCard = ({ doctor }) => {
           ))}
         </div>
         <p className="doctor-card__profile">{profile}</p>
-        <button className="doctor-card__button" onClick={() => setShowForm(true)}>
-          Reservar Cita
-        </button>
+
+        {/* Botón para reservar o cancelar cita */}
+        {appointments.length === 0 ? (
+          <button className="doctor-card__button" onClick={() => setShowForm(true)}>
+            Reservar Cita
+          </button>
+        ) : (
+          <button
+            className="doctor-card__button cancel"
+            onClick={() => handleCancelAppointment(appointments[0].id)}
+          >
+            Cancelar Cita
+          </button>
+        )}
       </div>
 
       {/* Mostrar el formulario si showForm es true */}

@@ -76,3 +76,12 @@
   .doctor-card__button:hover {
     background-color: #f0f0f0;
   }
+
+  .doctor-card__button.cancel {
+    background-color: #ff4d4d; /* Rojo para el botón de cancelación */
+    color: white;
+  }
+  
+  .doctor-card__button.cancel:hover {
+    background-color: #e60000; /* Cambio de color al pasar el mouse */
+  }
