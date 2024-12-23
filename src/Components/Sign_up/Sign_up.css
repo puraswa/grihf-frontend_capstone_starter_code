@@ -1,0 +1,123 @@
+.desktop {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.desktop .overlap-group {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  top: 0;
+  left: 0;
+  background-image: url(./img/rectangle-2.svg);
+  background-size: 100% 100%;
+}
+
+.desktop .rectangle {
+  position: absolute;
+  width: 697px;
+  height: 669px;
+  top: 177px;
+  left: 371px;
+  background-color: #80b4d9;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px #00000040;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar verticalmente los elementos */
+  justify-content: center; /* Centrar horizontalmente los elementos */
+  padding: 20px;
+}
+
+.desktop .frame,
+.desktop .frame-2,
+.desktop .frame-3,
+.desktop .frame-4,
+.desktop .frame-5 {
+  width: 545px;
+  height: 72px;
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px #00000040;
+  margin-bottom: 20px; /* Espacio entre los elementos */
+  display: flex;
+  align-items: center;
+}
+
+.desktop .text-wrapper,
+.desktop .text-wrapper-4 {
+  position: absolute;
+  top: 11px;
+  left: 77px;
+  font-family: "Judson-Italic", Helvetica;
+  font-weight: 400;
+  font-style: italic;
+  color: #979797;
+  font-size: 40px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.desktop .gridicons-user,
+.desktop .img,
+.desktop .weui-arrow-filled,
+.desktop .fluent-doctor {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  top: 12px;
+  left: 21px;
+}
+
+.desktop .weui-arrow-filled {
+  width: 24px;
+  height: 12px;
+  top: 30px;
+  left: 159px;
+}
+
+.desktop .div-wrapper {
+  display: flex;
+  width: 282px;
+  height: 81px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 71px;
+  background-color: #0077cc;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px #00000040;
+  margin-top: 20px; /* Alinear al final del rectángulo */
+}
+
+.desktop .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.50px;
+  font-family: "Poppins-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.desktop .vector {
+  position: absolute;
+  width: 33px;
+  height: 28px;
+  top: 200px;
+  left: -863px;
+}
