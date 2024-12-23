@@ -11,3 +11,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app {
+  padding: 20px;
+}
+
+.app h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0077cc;
+}
+
+.doctor-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.find-doctor-search {
+  margin-bottom: 20px;
+}
+
+.find-doctor-search label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.find-doctor-search input,
+.find-doctor-search select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.find-doctor-search button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.find-doctor-search button:hover {
+  background-color: #005599;
+}

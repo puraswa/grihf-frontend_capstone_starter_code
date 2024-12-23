@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 
-const FindDoctorSearch = () => {
+const FindDoctorSearch = ({ onSearch }) => {
   // Estado para almacenar los filtros y la especialidad
   const [specialty, setSpecialty] = useState('');
   const [availability, setAvailability] = useState('');
   const [gender, setGender] = useState('');
   const [experience, setExperience] = useState('');
   const [rating, setRating] = useState('');
-
-  // Estado para almacenar los resultados de la búsqueda
-  const [searchResults, setSearchResults] = useState([]);
 
   // Función que se ejecuta cuando el usuario realiza una búsqueda
   const handleSearch = () => {
@@ -31,6 +28,8 @@ const FindDoctorSearch = () => {
         gender: 'Masculino',
         experience: 10,
         rating: 4.5,
+        image: 'https://via.placeholder.com/150', // URL de la imagen del doctor
+        profile: 'Cardiólogo con experiencia en tratamientos avanzados.',
       },
       {
         id: 2,
@@ -40,6 +39,8 @@ const FindDoctorSearch = () => {
         gender: 'Femenino',
         experience: 7,
         rating: 4.8,
+        image: 'https://via.placeholder.com/150',
+        profile: 'Dermatóloga especializada en tratamientos faciales.',
       },
       {
         id: 3,
@@ -49,6 +50,8 @@ const FindDoctorSearch = () => {
         gender: 'Masculino',
         experience: 15,
         rating: 4.2,
+        image: 'https://via.placeholder.com/150',
+        profile: 'Cardiólogo con más de 15 años de experiencia.',
       },
       {
         id: 4,
@@ -58,6 +61,8 @@ const FindDoctorSearch = () => {
         gender: 'Femenino',
         experience: 5,
         rating: 4.7,
+        image: 'https://via.placeholder.com/150',
+        profile: 'Pediatra con experiencia en atención infantil.',
       },
     ];
 
@@ -72,13 +77,13 @@ const FindDoctorSearch = () => {
       );
     });
 
-    // Actualizar los resultados de la búsqueda
-    setSearchResults(results);
+    // Enviar los resultados al componente padre
+    onSearch(results);
   };
 
   return (
-    <div>
-      <h1>Buscar Doctor</h1>
+    <div className="find-doctor-search">
+      <h2>Buscar Doctor</h2>
       <div>
         <label htmlFor="specialty">Especialidad:</label>
         <input
@@ -147,26 +152,6 @@ const FindDoctorSearch = () => {
 
       {/* Botón de búsqueda */}
       <button onClick={handleSearch}>Buscar</button>
-
-      {/* Mostrar los resultados de la búsqueda */}
-      {searchResults.length > 0 ? (
-        <div>
-          <h2>Resultados de la búsqueda:</h2>
-          <ul>
-            {searchResults.map((doctor) => (
-              <li key={doctor.id}>
-                <strong>{doctor.name}</strong> - {doctor.specialty}
-                <br />
-                Disponibilidad: {doctor.availability} | Género: {doctor.gender}
-                <br />
-                Experiencia: {doctor.experience} años | Calificación: {doctor.rating}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : (
-        <p>No se encontraron resultados.</p>
-      )}
     </div>
   );
 };

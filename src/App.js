@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import BookingConsultation from "./BookingConsultation";
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from './Navbar'; // Asegúrate de que la ruta sea correcta
 
@@ -16,3 +17,5 @@ function App() {
   }
   
   export default App;
+
+  
