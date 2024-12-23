@@ -1,13 +1,14 @@
-import React from "react";
-import { useNavigate } from "react-router-dom"; // Si estás usando React Router para la navegación
+import React, { useState } from "react";
+import AppointmentForm from "./AppointmentForm";
 
 const DoctorCard = ({ doctor }) => {
   const { name, experience, rating, image, profile } = doctor;
-  const navigate = useNavigate(); // Hook para navegación
+  const [showForm, setShowForm] = useState(false);
 
-  // Función para manejar el clic en el botón de reserva
-  const handleReserve = () => {
-    navigate("/reserva"); // Redirige a la página de reserva
+  // Función para manejar el envío del formulario
+  const handleFormSubmit = (formData) => {
+    console.log("Cita reservada:", formData);
+    setShowForm(false); // Cierra el formulario después de enviarlo
   };
 
   return (
@@ -25,10 +26,18 @@ const DoctorCard = ({ doctor }) => {
           ))}
         </div>
         <p className="doctor-card__profile">{profile}</p>
-        <button className="doctor-card__button" onClick={handleReserve}>
+        <button className="doctor-card__button" onClick={() => setShowForm(true)}>
           Reservar Cita
         </button>
       </div>
+
+      {/* Mostrar el formulario si showForm es true */}
+      {showForm && (
+        <AppointmentForm
+          onSubmit={handleFormSubmit}
+          onClose={() => setShowForm(false)}
+        />
+      )}
     </div>
   );
 };
