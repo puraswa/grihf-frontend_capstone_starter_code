@@ -1,21 +1,23 @@
 import './App.css';
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './Navbar'; 
 import BookingConsultation from "./BookingConsultation";
-import { BrowserRouter } from 'react-router-dom';
-import Navbar from './Navbar'; // Asegúrate de que la ruta sea correcta
-
+import Notification from './Notification'; 
 
 function App() {
-    return (
-      <>
-        <BrowserRouter>
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Notification>
           <Navbar />
-          {/* Aquí puedes agregar tus rutas usando <Routes> y <Route> */}
-        </BrowserRouter>
-      </>
-    );
-  }
-  
-  export default App;
+          <Routes>
+            <Route path="/booking-consultation" element={<BookingConsultation />} />
+          </Routes>
+        </Notification>
+      </BrowserRouter>
+    </div>
+  );
+}
 
-  
+export default App;
