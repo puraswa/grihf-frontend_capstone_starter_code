@@ -1,0 +1,49 @@
+/* Estilos generales para el contenedor de la notificación */
+.appointment-card {
+    background-color: #f8f9fa; /* Fondo claro */
+    border: 1px solid #dee2e6; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 16px; /* Espaciado interno */
+    margin: 20px 0; /* Margen exterior */
+    width: 300px; /* Ancho fijo */
+    font-family: Arial, sans-serif; /* Fuente moderna */
+  }
+  
+  /* Estilos para el título de la notificación */
+  .appointment-card__title {
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    color: #343a40; /* Color de texto oscuro */
+    margin-bottom: 12px; /* Espaciado inferior */
+  }
+  
+  /* Estilos para los mensajes dentro de la notificación */
+  .appointment-card__message {
+    font-size: 14px; /* Tamaño de fuente */
+    color: #495057; /* Color de texto gris oscuro */
+    margin-bottom: 8px; /* Espaciado inferior */
+  }
+  
+  /* Estilos para el botón de cerrar la notificación */
+  .appointment-card button {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 8px 12px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero al pasar el mouse */
+    margin-top: 12px; /* Margen superior */
+  }
+  
+  /* Efecto hover para el botón */
+  .appointment-card button:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el mouse */
+  }
+  
+  /* Estilos para resaltar las etiquetas <strong> dentro de los mensajes */
+  .appointment-card__message strong {
+    color: #212529; /* Color de texto más oscuro */
+    font-weight: bold; /* Texto en negrita */
+  }
