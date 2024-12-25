@@ -1,0 +1,40 @@
+.reports-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    background-color: #f5f5f5; /* Fondo claro para el contenedor */
+}
+
+.report-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Fondo blanco para el card */
+    text-align: center; /* Centrar el contenido */
+    position: relative; /* Para posicionar elementos internos si es necesario */
+}
+
+.report-title {
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #eeeeee; /* Color del texto */
+    font-size: 24px; /* Tamaño de la fuente */
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    margin: 0 0 8px 0; /* Margen inferior */
+}
+
+.report-content {
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #0077Cc; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    margin: 0;
+}
