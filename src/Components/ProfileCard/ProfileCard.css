@@ -1,0 +1,40 @@
+.profile-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Fondo blanco para el card */
+    position: relative; /* Para posicionar elementos internos si es necesario */
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.profile-name {
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #eeeeee; /* Color del texto */
+    font-size: 40px; /* Tamaño de la fuente */
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    margin: 0;
+}
+
+.profile-email,
+.profile-bio {
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #0077Cc; /* Color del texto */
+    font-size: 32px; /* Tamaño de la fuente */
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    margin: 8px 0;
+}
